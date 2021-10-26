@@ -234,6 +234,23 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/Customer'
+      description: This is a test description
+  /vehicles:
+    get:
+      summary: Get Vehicles
+      tags:
+        - Vehicles
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+      operationId: get-vehicles
 components:
   schemas:
     User:
