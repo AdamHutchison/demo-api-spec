@@ -180,13 +180,17 @@ paths:
       summary: Updates job
       tags:
         - Jobs
-      responses: {}
+      responses:
+        '200':
+          description: OK
       operationId: patch-jobs-job_id
     delete:
       summary: Deletes job
       tags:
         - Jobs
-      responses: {}
+      responses:
+        '200':
+          description: OK
       operationId: delete-jobs-job_id
   '/customers/{customer_id}':
     parameters:
