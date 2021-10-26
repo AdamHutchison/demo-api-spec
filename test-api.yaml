@@ -188,6 +188,35 @@ paths:
         - Jobs
       responses: {}
       operationId: delete-jobs-job_id
+  '/customers/{customer_id}':
+    parameters:
+      - schema:
+          type: string
+        name: customer_id
+        in: path
+        required: true
+        description: the id of the customer
+    get:
+      summary: Gets the customer
+      tags:
+        - Customer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Customer'
+        '422':
+          description: Unprocessable Entity (WebDAV)
+      operationId: get-customers-customer_id
+      description: |-
+        https://calendar.google.com/calendar/u/0/r/day
+
+        * New line
 components:
   schemas:
     User:
@@ -245,6 +274,18 @@ components:
         status:
           type: string
       description: ''
+    Customer:
+      title: Customer
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+      description: ''
+      examples:
+        - id: string
+          name: string
   securitySchemes:
     API Key - 1:
       name: API Key
