@@ -3,7 +3,7 @@ info:
   title: test-api
   version: '1.0'
 servers:
-  - url: 'http://localhost:3002'
+  - url: 'http://localhost:3000'
 paths:
   '/users/{userId}':
     parameters:
@@ -217,6 +217,12 @@ paths:
         https://calendar.google.com/calendar/u/0/r/day
 
         * New line
+    patch:
+      summary: ''
+      operationId: patch-customers-customer_id
+      responses:
+        '200':
+          description: OK
 components:
   schemas:
     User:
