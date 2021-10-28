@@ -257,14 +257,6 @@ components:
       title: User
       type: object
       description: ''
-      examples:
-        - id: 142
-          firstName: Alice
-          lastName: Smith
-          email: alice.smith@gmail.com
-          dateOfBirth: '1997-10-31'
-          emailVerified: true
-          signUpDate: '2019-08-24'
       properties:
         id:
           type: integer
@@ -317,9 +309,6 @@ components:
         name:
           type: string
       description: ''
-      examples:
-        - id: string
-          name: string
   securitySchemes:
     API Key - 1:
       name: API Key
